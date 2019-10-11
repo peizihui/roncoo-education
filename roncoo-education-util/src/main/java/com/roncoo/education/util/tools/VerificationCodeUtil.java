@@ -23,9 +23,10 @@ public final class VerificationCodeUtil {
 	private VerificationCodeUtil() {
 
 	}
-
-	private static final int width = 57;// 图像宽度
-	private static final int height = 21;// 图像高度
+	// 图像宽度
+	private static final int width = 57;
+	// 图像高度
+	private static final int height = 21;
 
 	public static String create(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		// 定义输出格式
@@ -85,9 +86,12 @@ public final class VerificationCodeUtil {
 		if (bc > 255) {
 			bc = 255;
 		}
-		int red = fc + r.nextInt(bc - fc);// 红
-		int green = fc + r.nextInt(bc - fc);// 绿
-		int blue = fc + r.nextInt(bc - fc);// 蓝
+		// 红
+		int red = fc + r.nextInt(bc - fc);
+		// 绿
+		int green = fc + r.nextInt(bc - fc);
+		// 蓝
+		int blue = fc + r.nextInt(bc - fc);
 		return new Color(red, green, blue);
 	}
 
